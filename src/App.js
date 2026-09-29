@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <main className="pokedex">
-      <h1>Exercise 5 PokeDex!</h1>
+      <h1>Exercise 5 - PokeDex!</h1>
 
       <div className="pokedex-content">
         <section className="pokemon-section">
@@ -25,14 +24,14 @@ function App() {
 
 
         </section>
-        
+
         <section className="details-section">
-          <h2>Info</h2>
-          <div className="details-box">Pokemon Info</div>
+          <h2>Moves</h2>
+          <div className="details-box">transform</div>
 
           <div className="tab-buttons">
-            <button className="active">Info</button>
-            <button>Moves</button>
+            <button>Info</button>
+            <button className="active">Moves</button>
 
           </div>
         </section>

@@ -24,8 +24,10 @@ button {
 .pokedex h1 {
   position: absolute;
   top: 35px;
-  left: 368px;
-  width: 679px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  white-space: nowrap;
   margin: 0;
   font-size: 67px;
   font-weight: 700;
