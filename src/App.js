@@ -8,11 +8,33 @@ function App() {
 
       <div className="pokedex-content">
         <section className="pokemon-section">
-          <p>Pokemon side</p>
-        </section>
+          <div className="pokemon-image-box">
+            Pokemon image
+          </div>
 
+          <div className="pokemon-name">Pokemon name</div>
+
+          <p className="types-label">Types:</p>
+          <div className="type-badge">type</div>
+
+          <div className="arrow-buttons">
+            <button>❮</button>
+            <button>❯</button>
+          </div>
+
+
+
+        </section>
+        
         <section className="details-section">
-          <p>Details side</p>
+          <h2>Info</h2>
+          <div className="details-box">Pokemon Info</div>
+
+          <div className="tab-buttons">
+            <button className="active">Info</button>
+            <button>Moves</button>
+
+          </div>
         </section>
       </div>
 

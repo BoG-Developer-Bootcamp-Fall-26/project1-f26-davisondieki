@@ -26,3 +26,75 @@ h1 {
 .details-section {
   width: 45%;
 }
+
+.pokemon-image-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 162px;
+  height: 162px;
+  border: 2px solid #333;
+  text-align: center;
+}
+
+.pokemon-name {
+  margin-top: 10px;
+  padding: 4px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #e8e8e8;
+  text-align: center;
+}
+
+.types-label {
+  margin: 13px 0 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: #a8a878;
+  font-size: 11px;
+}
+
+.arrow-buttons,
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 14px;
+}
+
+.arrow-buttons button,
+.tab-buttons button {
+  min-width: 60px;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+
+.details-section h2 {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.details-box {
+  height: 207px;
+  padding: 12px;
+  background-color: #e8e8e8;
+  font-size: 13px;
+}
+
+.tab-buttons {
+  margin-top: 28px;
+}
+
+.tab-buttons button.active {
+  background-color: #60f777;
+}
