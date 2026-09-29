@@ -42,7 +42,15 @@ function App() {
           </div>
 
           <p className="types-label">Types:</p>
-          <div className="type-badge">type</div>
+
+          {pokemon && pokemon.types.map(function (item) {
+            return (
+              <div className="type-badge" key={item.type.name}>
+                {item.type.name}
+              </div>
+          );
+        })}
+          
 
           <div className="arrow-buttons">
             <button>❮</button>

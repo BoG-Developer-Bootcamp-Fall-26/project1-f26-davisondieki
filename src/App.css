@@ -74,15 +74,21 @@ button {
   line-height: 1;
 }
 
-.type-badge {
+.type-badges {
   position: absolute;
   top: 650px;
   left: 0;
   display: flex;
+  gap: 12px;
+}
+
+.type-badge {
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 117px;
+  min-width: 117px;
   height: 41px;
+  padding: 0 12px;
   border-radius: 10px;
   background: #a8a77a;
   font-size: 24px;
@@ -178,8 +184,9 @@ button {
   }
 
   .pokedex h1 {
+    transform: none;
     margin-bottom: 36px;
-    font-size: clamp(32px, 6vw, 67px);
+    font-size: 32px;
   }
 
   .pokemon-section {
@@ -192,7 +199,7 @@ button {
   }
 
   .types-label,
-  .type-badge,
+  .type-badges,
   .arrow-buttons {
     position: static;
   }
@@ -201,8 +208,9 @@ button {
     margin-top: 30px;
   }
 
-  .type-badge {
+  .type-badges {
     margin-top: 18px;
+    flex-wrap: wrap;
   }
 
   .arrow-buttons {
@@ -230,3 +238,40 @@ button {
     width: min(40%, 173px);
   }
 }
+
+.arrow-buttons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.info-list p {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 16px;
+  margin-left: 0;
+}
+
+.info-list h3 {
+  margin-top: 24px;
+  margin-right: 0;
+  margin-bottom: 16px;
+  margin-left: 0;
+  font-size: 36px;
+}
+
+.moves-list {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.moves-list li {
+  margin-bottom: 16px;
+}
+
