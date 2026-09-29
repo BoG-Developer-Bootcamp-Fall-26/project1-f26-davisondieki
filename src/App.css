@@ -14,3 +14,15 @@ h1 {
   text-align: center;
   font-size: 23px;
 }
+
+.pokedex-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.pokemon-section,
+.details-section {
+  width: 45%;
+}
