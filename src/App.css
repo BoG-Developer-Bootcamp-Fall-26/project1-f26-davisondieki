@@ -152,6 +152,13 @@ button {
   background: #7cff79;
 }
 
+.pokemon-image-box img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
 
 @media (max-width: 1439px) {
   .pokedex {

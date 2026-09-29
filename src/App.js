@@ -1,6 +1,30 @@
+import {useEffect} from 'react';
+import {useState} from 'react';
 import './App.css';
 
+
 function App() {
+  const [pokemon, setPokemon] = useState(null);
+  useEffect(function () {
+    async function loadPokemon() {
+      try {
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/1/');
+        if (!response.ok) {
+          throw new Error('Could not load the Pokemon');
+        }
+        const data = await response.json();
+        setPokemon(data);
+      } catch (error) {
+        console.error(error);
+      }
+      
+    }
+    loadPokemon();
+  }, []);  
+
+
+
+
   return (
     <main className="pokedex">
       <h1>Exercise 5 - PokeDex!</h1>
@@ -8,10 +32,14 @@ function App() {
       <div className="pokedex-content">
         <section className="pokemon-section">
           <div className="pokemon-image-box">
-            Pokemon image
+            {pokemon && (
+              <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+            )}
           </div>
 
-          <div className="pokemon-name">Pokemon name</div>
+          <div className="pokemon-name">
+            {pokemon ? pokemon.name : 'Loading...'}
+          </div>
 
           <p className="types-label">Types:</p>
           <div className="type-badge">type</div>
@@ -40,6 +68,9 @@ function App() {
 
     </main>
   );
+  
 }
+
+
 
 export default App;
