@@ -68,7 +68,7 @@ function App() {
 
   return (
     <main className="pokedex">
-      <h1>Exercise 5 - PokeDex!</h1>
+      <h1>EBits of Good Mid-Semester Project</h1>
 
       <div className="pokedex-content">
         <section className="pokemon-section">
