@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Project 1 — Mini Pokédex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+In this project, you'll be creating a frontend that graphically displays Pokémon information (similiar to a Pokédex). To fetch all the necessary information, you'll be working with the [PokeAPI](https://pokeapi.co/docs/v2#pokemon).
 
-## Available Scripts
+## Setting Up
+- Fork this repository, set the owner to BoG-Developer-Bootcamp-Fall-26, and name it `project1-f26-yourname`
+- Clone the repository onto your local computer
+- Navigate to your new project folder and create your HTML, CSS, and JS files
 
-In the project directory, you can run:
+# Submission Instructions
+- Create a 0.5-3 minute video walkthrough of your project (include the video link in the README of your project repo)
+  - You can just post it to Youtube or provide a Google Drive link or whatever works.
+- Push all your changes to the remote repository. Make sure that the owner is BoG-Developer-Bootcamp-Fall-26 so that we can see the repository! (if you forgot to do this, you can alternatively message Pattakit on Slack with the link to your repo)
+- **Due Date:** 9/29/26
 
-### `npm start`
+## Requirements
+- Must use HTML, CSS, and JS
+- Must contain the specified frontend elements
+- Must use the free PokeAPI
+- Should have at least 20 commits (though not required)
+- **Extra Credit:** Make the application responsive on other devices (phones, tablets, etc)
+- **Disclaimer:** Please do not do anything extra to this project that makes it look different from the Figma. We want to test your ability to make a webpage that fits the requirements outlined in the Figma and the assignment as this is similar to how work is assigned to BoG developers. We will have more opportunities for you to design and go above and beyond later, but please just stick to the requirements for now.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Specifications
+**What the end result should look like:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="500" alt="Screenshot 2023-09-26 at 5 41 02 PM" src="https://github.com/BoG-Dev-Bootcamp-F23/project1-f23/assets/8647920/e32ac85b-18f0-424d-bccb-a369b55e12f2">
+<img width="500" alt="Screenshot 2023-09-26 at 5 41 09 PM" src="https://github.com/BoG-Dev-Bootcamp-F23/project1-f23/assets/8647920/46dc87f0-400f-4e3d-bcf9-557b58befd62">
 
-### `npm test`
+### General Guidelines
+You should try to follow the mockups as closely as possible (including the alignments). The Figma designs can be found [here](https://www.figma.com/file/fQMSS7UqlWSY8M4uadlboM/Bits-of-Good-F23-Project-1?type=design&node-id=0%3A1&mode=design&t=94SJ06eCzcBAOSip-1).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is designed to replicate real Bits of Good developer work. Typically, developers are given mockups by designers and are tasked with implementing them in code.
 
-### `npm run build`
+### API Fetches
+You will be pinging the PokeAPI using `fetch()`. Refer to the [PokeAPI docs](https://pokeapi.co/docs/v2#pokemon) for more details about endpoints and JSON response formats. You can also view your requests at https://pokeapi.co/.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Arrow Buttons
+<img width="324" alt="Screenshot 2023-09-26 at 5 41 48 PM" src="https://github.com/BoG-Dev-Bootcamp-F23/project1-f23/assets/8647920/45f00173-3fac-4ac8-bf4c-e3cffd00c92f">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+These buttons control the ID number of the Pokémon you are currently displaying. Whenever a user clicks on these buttons, the ID number should be incremented/decremented, and the other components should be updated accordingly (to achive this, you'd want to create an HTTP request every time the buttons are clicked to fetch the data for the next Pokémon).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Note: be careful about querying an id number that doesn't exist (e.g. 0).
 
-### `npm run eject`
+### Pokémon Identifiers (Image, Name, Types)
+<img width="264" alt="Screenshot 2023-09-26 at 5 42 00 PM" src="https://github.com/BoG-Dev-Bootcamp-F23/project1-f23/assets/8647920/54923f99-0eef-4f13-a26d-cd3df259be06">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+These should update automatically as a user clicks on the arrow buttons. All of the necessary data is available in the response to the HTTP request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Pokémon Types
+For however many types a Pokémon has, display all of them horizontally. Each type should correspond with a different color. The [official hex colors](https://www.epidemicjohto.com/t882-type-colors-hex-colors) for each type are:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img width="153" alt="Screenshot 2023-09-26 at 5 42 21 PM" src="https://github.com/BoG-Dev-Bootcamp-F23/project1-f23/assets/8647920/27cd1982-094d-42d4-88f7-28f99e4598f9">
 
-## Learn More
+### Info/Moves Buttons
+<img width="374" alt="Screenshot 2023-09-26 at 5 42 39 PM" src="https://github.com/BoG-Dev-Bootcamp-F23/project1-f23/assets/8647920/061ff1b1-82eb-4af9-9909-eeef3835a578">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The color of the buttons should differ based on whichever one is currently active (i.e. if the info is showing, then the info button should be green, etc.). Clicking each button should change whether the info or moves button is showing. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The selected setting should remain the same when the user switches between Pokémon using the arrows. 
 
-### Code Splitting
+### Stats Panel
+#### Info
+<img width="269" alt="Screenshot 2023-09-26 at 5 42 56 PM" src="https://github.com/BoG-Dev-Bootcamp-F23/project1-f23/assets/8647920/24a2cd97-332c-493d-ab21-afa6e6e1f25c">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This panel should change accordingly as the user switches between Pokémon. Make sure the units are being displayed correctly — for example, the height stat is returned as an integer from the API but the units are in 0.1m.
 
-### Analyzing the Bundle Size
+#### Moves
+<img width="270" alt="Screenshot 2023-09-26 at 5 43 05 PM" src="https://github.com/BoG-Dev-Bootcamp-F23/project1-f23/assets/8647920/3dc9263e-0d10-4e9d-9f54-06f3ab90819a">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Like the info panel, the moves should change accordingly as the user switches between Pokémon. This panel should simply list the names of all the Pokémon's moves.
