@@ -79,7 +79,7 @@ function App() {
           </div>
 
           <div className="pokemon-name">
-            {pokemon ? pokemon.name : 'Loading...'}
+            {pokemon ? pokemon.name : error || 'Loading...'}
           </div>
 
           <p className="types-label">Types:</p>
