@@ -1,5 +1,13 @@
 # Project 1 — Mini Pokédex
 
+## Video
+
+https://drive.google.com/file/d/1RHyyVZo4_rGE1t1id7PC4dUls7govhDa/view?usp=sharing
+
+## Notes
+I initially completed this project in my original bootcamp repo under 'exer5/pokedex, but then I realized that I needed to fork the project repo. To address this, I transferred all my commits from that repo into this current repo.
+
+
 ## Description
 In this project, you'll be creating a frontend that graphically displays Pokémon information (similiar to a Pokédex). To fetch all the necessary information, you'll be working with the [PokeAPI](https://pokeapi.co/docs/v2#pokemon).
 
